@@ -8,10 +8,10 @@ import sklearn
 
 
 # Model paths
-RF_MODEL_PATH = r"C:\Users\ACER\Desktop\AIO\Warm_up_Session_1\AIO Conquer\archive\deploy_streamlit ver00.00.01\random_forest_model.joblib"
-LR_MODEL_PATH = r"C:\Users\ACER\Desktop\AIO\Warm_up_Session_1\AIO Conquer\archive\deploy_streamlit ver00.00.01\logistic_regression_model.joblib"
-SCALER_PATH = r"C:\Users\ACER\Desktop\AIO\Warm_up_Session_1\AIO Conquer\archive\deploy_streamlit ver00.00.01\scaler.pkl"
-FEATURES_PATH = r"C:\Users\ACER\Desktop\AIO\Warm_up_Session_1\AIO Conquer\archive\deploy_streamlit ver00.00.01\model_features.pkl"
+RF_MODEL_PATH = "random_forest_model.joblib"
+LR_MODEL_PATH = "logistic_regression_model.joblib"
+SCALER_PATH = "scaler.pkl"
+FEATURES_PATH = "model_features.pkl"
 
 @st.cache_resource
 def load_artifacts():
@@ -171,4 +171,5 @@ if predict_button:
         st.markdown("#### Probabilities")
         st.metric("Stay", f"{lr_probabilities[0]*100:.2f}%")
         st.metric("Leave", f"{lr_probabilities[1]*100:.2f}%")
+
          
